@@ -3,7 +3,7 @@
         <div class="l-content">
             <el-button @click="handleMenu" icon="el-icon-menu" size="mini"></el-button>
             <!-- 面包屑 -->
-            <el-breadcrumb separator="/">
+            <el-breadcrumb separator-class="el-icon-arrow-right">
                 <el-breadcrumb-item v-for="item in tags" :key="item.path" :to="{ path: item.path }">{{ item.lable }}
                 </el-breadcrumb-item>
             </el-breadcrumb>
@@ -47,7 +47,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 30px;
 
     .text {
         color: #fff;
@@ -71,7 +71,7 @@ export default {
         /deep/.el-breadcrumb__item {
             .el-breadcrumb__inner {
                 font-weight: normal;
-                color: rgb(105, 98, 98);
+                color: white;
                 margin-left: 10px;
             }
             &:last-child{
