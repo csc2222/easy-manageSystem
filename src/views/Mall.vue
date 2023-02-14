@@ -1,10 +1,93 @@
 <template>
-    <h1>我是商品</h1>
+  <div>
+    <!-- 卡片区域  -->
+    <el-card>
+      <el-row :gutter="20">
+        <el-col :span="8">
+          <el-input placeholder="请输入内容" clearable>
+            <el-button slot="append" icon="el-icon-search"></el-button>
+          </el-input>
+        </el-col>
+        <el-col :span="4"
+          ><el-button type="primary">添加商品</el-button></el-col
+        >
+      </el-row>
+      <!-- table表格区域 -->
+      <el-table :data="goodsData">
+        <el-table-column label="商品ID" prop="goods_id">
+        </el-table-column>
+        <el-table-column label="商品名称" prop="goods_name">
+        </el-table-column>
+        <el-table-column label="商品价格" prop="goods_price">
+        </el-table-column>
+        <el-table-column label="创建时间" prop="goods_time" >
+        </el-table-column>
+        <el-table-column label="操作">
+            <template >
+                <el-button type="primary" icon="el-icon-edit" size="mini">
+                </el-button>
+                <el-button type="danger" icon="el-icon-delete" size="mini" @click="handleDelete(goods_id)">
+                </el-button>
+            </template>
+        </el-table-column>
+      </el-table>
+      <!-- 分页区域 -->
+      <el-pagination
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+      :current-page.sync="currentPage3"
+      :page-size="100"
+      layout="prev, pager, next, jumper"
+      :total="1000"
+      style="text-align: center;"
+      background>
+    </el-pagination>
+    </el-card>
+  </div>
 </template>
 <script>
+import { getData,delGood } from '@/api';
 export default {
-    data() {
-        return {}
-    }
-}
+  data() {
+    return {
+        //商品列表
+        goodsData:[]
+    };
+  },
+  mounted() {
+    getData().then(({data})=>{
+        const {goodsData}=data.data;
+        console.log(goodsData)
+        this.goodsData=goodsData
+        this.$message.success("获取商品列表成功")
+    })
+  },
+  methods: {
+    handleDelete(row) {
+            this.$confirm('此操作将永久删除该商品, 是否继续?', '提示', {
+                confirmButtonText: '确定',
+                cancelButtonText: '取消',
+                type: 'warning'
+            }).then(() => {
+                delGood({ goods_id }).then(() => {
+                    this.$message({
+                        type: 'success',
+                        message: '删除成功!'
+                    });
+                    //重新获取列表数据,更新列表
+                    this.getData()
+                })
+
+            }).catch(() => {
+                this.$message({
+                    type: 'info',
+                    message: '已取消删除'
+                });
+            });
+        },
+  },
+};
 </script>
+
+<style lang="less" scoped>
+</style>

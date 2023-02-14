@@ -125,6 +125,50 @@ export default {
                         monthBuy:3000,
                         totalBuy:22000
                     }
+                ],
+                goodsData:[
+                    {
+                        goods_id: 1,
+                        goods_name: "oppo",
+                        goods_price: 2000,
+                        goods_number: 150,
+                        goods_time:`2023年2月15日`,
+                    },
+                    {
+                        goods_id: 2,
+                        goods_name: "vivo",
+                        goods_price: 2000,
+                        goods_number: 150,
+                        goods_time:`2023年2月15日`
+                    },
+                    {
+                        goods_id: 3,
+                        goods_name: "苹果",
+                        goods_price: 6000,
+                        goods_number: 150,
+                        goods_time:`2023年2月15日`
+                    },
+                    {
+                        goods_id: 4,
+                        goods_name: "小米",
+                        goods_price: 2000,
+                        goods_number: 150,
+                        goods_time:`2023年2月15日`
+                    },
+                    {
+                        goods_id: 5,
+                        goods_name: "三星",
+                        goods_price: 4000,
+                        goods_number: 150,
+                        goods_time:`2023年2月15日`
+                    },
+                    {
+                        goods_id: 6,
+                        goods_name: "魅族",
+                        goods_price: 2000,
+                        goods_number: 150,
+                        goods_time:`2023年2月15日`
+                    },
                 ]
             }
         }
