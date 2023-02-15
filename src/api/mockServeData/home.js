@@ -169,6 +169,48 @@ export default {
                         goods_number: 150,
                         goods_time:`2023年2月15日`
                     },
+                    {
+                        goods_id: 7,
+                        goods_name: "荣耀",
+                        goods_price: 3000,
+                        goods_number: 150,
+                        goods_time:`2023年2月15日`
+                    },
+                    {
+                        goods_id: 8,
+                        goods_name: "一加",
+                        goods_price: 4000,
+                        goods_number: 150,
+                        goods_time:`2023年2月15日`
+                    },
+                    {
+                        goods_id: 9,
+                        goods_name: "努比亚",
+                        goods_price: 3000,
+                        goods_number: 150,
+                        goods_time:`2023年2月15日`
+                    },
+                    {
+                        goods_id: 10,
+                        goods_name: "索尼",
+                        goods_price: 5000,
+                        goods_number: 150,
+                        goods_time:`2023年2月15日`
+                    },
+                    {
+                        goods_id: 11,
+                        goods_name: "中兴",
+                        goods_price: 2000,
+                        goods_number: 150,
+                        goods_time:`2023年2月15日`
+                    },
+                    {
+                        goods_id: 12,
+                        goods_name: "金立",
+                        goods_price: 2000,
+                        goods_number: 150,
+                        goods_time:`2023年2月15日`
+                    }
                 ]
             }
         }

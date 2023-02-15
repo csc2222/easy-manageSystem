@@ -34,7 +34,8 @@
                         prop="totalBuy"
                         label="总购买">
                     </el-table-column> -->
-                    <el-table-column v-for="(val, key) in tableLabel" :prop="key" :label="val" />
+                    <el-table-column v-for="(val, key) in tableLabel" :prop="key" :label="val" :key="key.name
+                    "/>
                 </el-table>
             </el-card>
         </el-col>

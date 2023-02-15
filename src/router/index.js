@@ -4,7 +4,7 @@ import Home from '../views/Home'
 import User from '../views/User'
 import Main from '../views/Main'
 import Mall from '../views/Mall'
-import PageOne from '../views/PageOne'
+import Order from '../views/Order'
 import PageTwo from '../views/PageTwo'
 import Login from '../views/Login'
 
@@ -20,7 +20,7 @@ const routes = [
             { path: 'home', component: Home },//首页
             { path: 'user', component: User },//用户管理
             { path: 'mall', component: Mall },//商品管理
-            { path: 'page1', component: PageOne },//页面1
+            { path: 'order', component: Order },//页面1
             { path: 'page2', component: PageTwo },//页面2
         ]
     },

@@ -12,7 +12,7 @@
                 <span slot="title">{{ item.lable }}</span>
             </template>
             <el-menu-item-group v-for="subItem in item.children" :key="subItem.path">
-                <el-menu-item @click="clickMenu(subItem)" :index="subItem.path">{{ subItem.path }}</el-menu-item>
+                <el-menu-item @click="clickMenu(subItem)" :index="subItem.path">{{ subItem.lable }}</el-menu-item>
             </el-menu-item-group>
         </el-submenu>
     </el-menu>
@@ -70,11 +70,11 @@ export default {
                     icon: 'setting',
                     children: [
                         {
-                            path: "/page1",
-                            name: "page1",
-                            lable: "页面1",
+                            path: "/order",
+                            name: "order",
+                            lable: "订单管理",
                             icon: 'setting',
-                            url: 'Other/PageOne',
+                            url: 'Order/Order',
                         },
                         {
                             path: "/page2",
