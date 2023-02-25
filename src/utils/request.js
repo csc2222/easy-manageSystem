@@ -3,6 +3,7 @@ import axios from "axios";
 
 const http=axios.create({
     //通用请求地址前缀
+    //baseURL: 'http://127.0.0.1:3018/api/user',
     baseURL: '/api',
     timeout: 10000, //超时时间
 })
